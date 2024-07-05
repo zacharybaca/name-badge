@@ -6,7 +6,7 @@ function App() {
   
 
   return (
-    <div>
+    <div id="app-container">
       <BadgeForm />
       <BadgeList />
     </div>

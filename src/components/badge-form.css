@@ -1,0 +1,53 @@
+#badge-form {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    padding: 2%;
+}
+
+#name-container {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 2%;
+    max-width: 100%;
+    border: 2px solid green;
+}
+
+#personal-info-container {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 2%;
+    max-width: 100%;
+    border: 2px solid orange;
+}
+
+#other-info-container {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 2%;
+    max-width: 100%;
+    border: 2px solid yellow;
+}
+
+#about-container {
+    display: flex;
+    padding-bottom: 2%;
+    max-width: 100%;
+    border: 2px solid purple;
+}
+
+#about-container textarea {
+    width: 100%;
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    padding-top: 3%;
+}
+
+input[type="text"], input[type="email"], input[type="tel"] {
+    width: 40%;
+    
+}
