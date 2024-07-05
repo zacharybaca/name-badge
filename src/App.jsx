@@ -1,4 +1,5 @@
-
+import BadgeForm from "./components/BadgeForm";
+import BadgeList from "./components/BadgeList";
 import './App.css'
 
 function App() {
@@ -6,7 +7,8 @@ function App() {
 
   return (
     <div>
-      <h1>App Component</h1>
+      <BadgeForm />
+      <BadgeList />
     </div>
   )
 }
