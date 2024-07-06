@@ -1,13 +1,16 @@
 
 import "./badge-form.css";
 export default function BadgeForm() {
+    
+
     return (
-            <form id="badge-form">
+            <form id="badge-form" name="badge">
                 <div id="name-container">
                     <input 
                         type="text" 
                         id="first-name" 
                         name="firstName" 
+                        minLength="3"
                         placeholder="First Name" 
                     />
 
@@ -15,6 +18,7 @@ export default function BadgeForm() {
                         type="text" 
                         id="last-name" 
                         name="lastName" 
+                        minLength="3"
                         placeholder="Last Name" 
                     />
                 </div>
@@ -23,7 +27,8 @@ export default function BadgeForm() {
                     <input 
                         type="email" 
                         id="email" 
-                        name="email" 
+                        name="email"
+                        minLength="3" 
                         placeholder="Email" 
                     />
 
@@ -31,6 +36,7 @@ export default function BadgeForm() {
                         type="text" 
                         id="birthplace" 
                         name="birthplace" 
+                        minLength="3"
                         placeholder="Place of Birth" 
                     />
                 </div>
@@ -40,6 +46,7 @@ export default function BadgeForm() {
                         type="tel" 
                         id="phone" 
                         name="phone" 
+                        minLength="3"
                         placeholder="Phone" 
                     />
 
@@ -47,18 +54,22 @@ export default function BadgeForm() {
                         type="text" 
                         id="food" 
                         name="food" 
+                        minLength="3"
                         placeholder="Favorite Food" 
                     />
                 </div>
 
                 <div id="about-container">
                     <textarea 
+                        rows="6"
+                        cols="50"
+                        minLength="3"
                         placeholder="Tell us about yourself"
                     />
                 </div>   
                 
                 <div id="button-container">
-                    <button> Submit</button>
+                    <button type="submit">Submit</button>
                 </div>
                 
                 
