@@ -1,7 +1,30 @@
-
+import React from "react";
 import "./badge-form.css";
 export default function BadgeForm() {
-    
+    const [formState, setFormState] = React.useState(
+        {
+            firstName: "",
+            lastName: "",
+            email: "",
+            birthplace: "",
+            phone: "",
+            food: "",
+            about: ""
+        }
+    )
+
+    function handleChange(event) {
+        const {name, value} = event.target;
+
+        setFormState(prevState => ({
+            ...prevState,
+            [name]: value
+        }))
+    }
+
+   
+
+   let valueEntered = formState.firstName && formState.lastName && formState.email && formState.birthplace && formState.phone && formState.food && formState.about;
 
     return (
             <form id="badge-form" name="badge">
@@ -11,6 +34,8 @@ export default function BadgeForm() {
                         id="first-name" 
                         name="firstName" 
                         minLength="3"
+                        onChange={handleChange}
+                        value={formState.firstName}
                         placeholder="First Name" 
                     />
 
@@ -19,6 +44,8 @@ export default function BadgeForm() {
                         id="last-name" 
                         name="lastName" 
                         minLength="3"
+                        onChange={handleChange}
+                        value={formState.lastName}
                         placeholder="Last Name" 
                     />
                 </div>
@@ -28,7 +55,9 @@ export default function BadgeForm() {
                         type="email" 
                         id="email" 
                         name="email"
-                        minLength="3" 
+                        minLength="3"
+                        onChange={handleChange} 
+                        value={formState.email}
                         placeholder="Email" 
                     />
 
@@ -37,6 +66,8 @@ export default function BadgeForm() {
                         id="birthplace" 
                         name="birthplace" 
                         minLength="3"
+                        onChange={handleChange}
+                        value={formState.birthplace}
                         placeholder="Place of Birth" 
                     />
                 </div>
@@ -47,6 +78,8 @@ export default function BadgeForm() {
                         id="phone" 
                         name="phone" 
                         minLength="3"
+                        onChange={handleChange}
+                        value={formState.phone}
                         placeholder="Phone" 
                     />
 
@@ -55,6 +88,8 @@ export default function BadgeForm() {
                         id="food" 
                         name="food" 
                         minLength="3"
+                        onChange={handleChange}
+                        value={formState.food}
                         placeholder="Favorite Food" 
                     />
                 </div>
@@ -63,13 +98,16 @@ export default function BadgeForm() {
                     <textarea 
                         rows="6"
                         cols="50"
+                        name="about"
                         minLength="3"
+                        onChange={handleChange}
+                        value={formState.about}
                         placeholder="Tell us about yourself"
                     />
                 </div>   
                 
                 <div id="button-container">
-                    <button type="submit">Submit</button>
+                    <button type="submit" disabled={!valueEntered}>Submit</button>
                 </div>
                 
                 
