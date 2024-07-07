@@ -1,6 +1,9 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import "./badge-form.css";
-export default function BadgeForm() {
+export default function BadgeForm(props) {
+    
+
     const [formState, setFormState] = React.useState(
         {
             firstName: "",
@@ -14,6 +17,7 @@ export default function BadgeForm() {
     )
 
     function handleChange(event) {
+        event.preventDefault();
         const {name, value} = event.target;
 
         setFormState(prevState => ({
@@ -22,12 +26,29 @@ export default function BadgeForm() {
         }))
     }
 
-   
+    function addBadge(event) {
+        event.preventDefault();
+
+        props.save(prevState => ({
+            ...prevState,
+            formState
+        }))
+
+        setFormState({
+                firstName: "",
+                lastName: "",
+                email: "",
+                birthplace: "",
+                phone: "",
+                food: "",
+                about: ""
+        })
+    }
 
    let valueEntered = formState.firstName && formState.lastName && formState.email && formState.birthplace && formState.phone && formState.food && formState.about;
 
     return (
-            <form id="badge-form" name="badge">
+            <form id="badge-form" name="badge" onSubmit={addBadge}>
                 <div id="name-container">
                     <input 
                         type="text" 
