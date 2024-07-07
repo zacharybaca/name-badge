@@ -80,9 +80,10 @@ export default function BadgeForm() {
                         minLength="3"
                         onChange={handleChange}
                         value={formState.phone}
+                        pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
                         placeholder="Phone" 
                     />
-
+                    
                     <input 
                         type="text" 
                         id="food" 
