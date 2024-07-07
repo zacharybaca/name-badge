@@ -29,10 +29,12 @@ export default function BadgeForm(props) {
     function addBadge(event) {
         event.preventDefault();
 
-        props.save(prevState => ({
-            ...prevState,
-            formState
-        }))
+        props.save(prevState => ([
+            {
+                ...prevState,
+                formState
+            }
+        ]))
 
         setFormState({
                 firstName: "",

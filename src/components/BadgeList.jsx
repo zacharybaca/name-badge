@@ -6,15 +6,15 @@ export default function BadgeList(props) {
     return (
         <div>
             {console.log('Saved: ', props.savedBadges)}
-            {/* props.savedBadges.length === 0 ? <p>No Saved Badges</p> : <ul>
-                {props.savedBadges((badge) => {
+            {props.savedBadges.length === 0 ? <div id="no-save-container"><p id="no-save">No Saved Badges</p></div> : <ul>
+                {props.savedBadges.map((badge, index) => {
                     return (
-                        <li>
-                            <Badge badgeData={badge}/>
+                        <li key={index}>
+                            <Badge badgeData={badge.formState}/>
                         </li>
                     )
                 })}
-            </ul> */}
+            </ul>}
         </div>
     )
 }

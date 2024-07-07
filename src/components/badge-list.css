@@ -1,0 +1,15 @@
+#no-save-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 30%;
+    max-width: 100%;
+}
+
+#no-save {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+ul > li {
+    list-style: none;
+}
