@@ -10,6 +10,7 @@
     display: flex;
     justify-content: flex-start;
     padding-bottom: 1%;
+    padding-top: 1%;
 }
 
 #badge-personal-info-container {

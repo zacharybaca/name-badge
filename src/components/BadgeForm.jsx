@@ -30,12 +30,10 @@ export default function BadgeForm(props) {
         event.preventDefault();
 
         props.save(prevState => ([
-            {
-                ...prevState,
-                formState
-            }
+           ...prevState,
+           formState
         ]))
-
+        console.log('State: ', formState);
         setFormState({
                 firstName: "",
                 lastName: "",

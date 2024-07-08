@@ -3,7 +3,7 @@
 import "./badge.css";
 export default function Badge(props) {
     return (
-        <>
+    <div id="all-badges-container">
         <header id="badge-header">Badge:</header>
         <div id="badge-container">
             <div id="badge-name-container">
@@ -20,6 +20,7 @@ export default function Badge(props) {
             <div id="badge-about-container">
                 <p>{props.badgeData.about}</p>
             </div>
-        </div></>
+        </div>
+    </div>
     )
 }

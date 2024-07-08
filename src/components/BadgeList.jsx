@@ -10,7 +10,7 @@ export default function BadgeList(props) {
                 {props.savedBadges.map((badge, index) => {
                     return (
                         <li key={index}>
-                            <Badge badgeData={badge.formState}/>
+                            <Badge badgeData={badge}/>
                         </li>
                     )
                 })}
