@@ -5,6 +5,27 @@
     max-width: 100%;
 }
 
+#list-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    max-width: 100%;
+}
+
+#list-container ul   {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: 3px solid yellow;
+}
+
+#list-container ul li {
+    width: 54%;
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
 #no-save {
     font-size: 25px;
     font-weight: 800;
@@ -12,4 +33,9 @@
 
 ul > li {
     list-style: none;
+}
+
+#list-container {
+    border: 3px solid green;
+    width: 100%;
 }

@@ -3,14 +3,23 @@
 import "./badge.css";
 export default function Badge(props) {
     return (
-        <div>
-            <h1>{props.badgeData.firstName}</h1>
-            <h1>{props.badgeData.lastName}</h1>
-            <h1>{props.badgeData.email}</h1>
-            <h1>{props.badgeData.birthplace}</h1>
-            <h1>{props.badgeData.phone}</h1>
-            <h1>{props.badgeData.food}</h1>
-            <h1>{props.badgeData.about}</h1>
-        </div>
+        <>
+        <header id="badge-header">Badge:</header>
+        <div id="badge-container">
+            <div id="badge-name-container">
+                <p>Name: {`${props.badgeData.firstName} ${props.badgeData.lastName}`}</p>
+            </div>
+            <div id="badge-personal-info-container">
+                <p>Email: {props.badgeData.email}</p>
+                <p>Place of Birth: {props.badgeData.birthplace}</p>
+            </div>
+            <div id="badge-other-info-container">
+                <p>Phone: {props.badgeData.phone}</p>
+                <p>Favorite Food: {props.badgeData.food}</p>
+            </div>
+            <div id="badge-about-container">
+                <p>{props.badgeData.about}</p>
+            </div>
+        </div></>
     )
 }

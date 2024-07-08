@@ -1,0 +1,41 @@
+#badge-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-bottom: 2%;
+}
+
+#badge-name-container {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 1%;
+}
+
+#badge-personal-info-container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1%;
+}
+
+#badge-other-info-container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1%;
+}
+
+#badge-about-container {
+    
+    height: 15vh;
+    border: 3px solid black;
+}
+
+#badge-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: grey;
+    color: white;
+    padding-left: 3%;
+    height: 3vh;
+}
