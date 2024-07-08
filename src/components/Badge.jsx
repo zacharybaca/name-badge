@@ -2,6 +2,8 @@
 
 import "./badge.css";
 export default function Badge(props) {
+
+    const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
     
     return (
     <div id="all-badges-container">
@@ -15,7 +17,7 @@ export default function Badge(props) {
                 <p>Place of Birth: {props.badgeData.birthplace}</p>
             </div>
             <div id="badge-other-info-container">
-                <p>Phone: {props.badgeData.phone}</p>
+                <p>Phone: {props.badgeData.phone.replace(phoneRegex, '($1) $2-$3')}</p>
                 <p>Favorite Food: {props.badgeData.food}</p>
             </div>
             <div id="badge-about-container">
