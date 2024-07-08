@@ -8,7 +8,10 @@ function App() {
 
   return (
     <div id="app-container">
+      <h1>Create Your Own Name Badge</h1>
       <BadgeForm save={setSavedBadges}/>
+      <h2>Saved Name Badges</h2>
+      <hr />
       <BadgeList savedBadges={savedBadges}/>
     </div>
   )

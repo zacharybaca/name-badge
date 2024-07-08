@@ -2,9 +2,10 @@
 
 import "./badge.css";
 export default function Badge(props) {
+    
     return (
     <div id="all-badges-container">
-        <header id="badge-header">Badge:</header>
+        <header id="badge-header" style={{backgroundColor: Number(props.itemNumber) % 2 === 0 ? "blue" : "red"}}>Badge:</header>
         <div id="badge-container">
             <div id="badge-name-container">
                 <p>Name: {`${props.badgeData.firstName} ${props.badgeData.lastName}`}</p>
